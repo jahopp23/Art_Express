@@ -85,7 +85,7 @@ module.exports = {
   ** Environment variables
   */
   env: {
-    COSMIC_BUCKET: process.env.COSMIC_BUCKET || 'vue-ecommerce',
+    COSMIC_BUCKET: process.env.COSMIC_BUCKET || 'art-express',
     COSMIC_READ_KEY: process.env.COSMIC_READ_KEY,
     STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY
   }

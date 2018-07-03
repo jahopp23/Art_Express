@@ -2,8 +2,28 @@ main {
   min-height: calc(100vh - 232px);
 }
 body {
-  font-family: 'Nunito', sans-serif !important;
+  font-family: 'Arial', sans-serif !important;
 }
 button.modal-close {
   display: none;
 }
+
+.navbar .navbar-brand p{
+  font-family: Faster One;
+  color: #eee;
+  
+}
+
+.navbar-end .navbar-item a{
+  color: #eee;
+}
+
+.hero-body .title {
+  color: #eee;
+}
+
+.hero-body .subtitle{
+  color: #eee;
+}
+
+

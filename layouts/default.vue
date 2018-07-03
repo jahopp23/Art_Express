@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nav class="navbar is-white has-shadow">
+    <nav class="navbar is-black">
       <div class="container">
         <div class="navbar-brand">
           <router-link to="/" class="navbar-item is-size-3 logo has-text-dark">
-            The<b>Case</b> Company
+            <p>Art Express</p>
           </router-link>
         </div>
         <div class="navbar-menu is-active">
@@ -38,6 +38,6 @@
 
 <style>
 body {
-  background: #DAE2DB;
+  background: #b4b4b4;
 }
 </style>
