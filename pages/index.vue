@@ -3,7 +3,7 @@
     <section class="hero is-medium" :style="{ backgroundImage: `url(${hero})` }">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title"> Delivering Art Worldwide.</h1>
+          <h1 class="title"> Delivering Fine Art Worldwide.</h1>
           <p class= "subtitle has-text-weight-light">
             Photography | Painting | Graphic Design 
           </p>
@@ -16,22 +16,24 @@
         <div class="columns">
           <div class="column is-one-fifth">
             <div class="box">
-              <h2 class="subtitle has-text-weight-bold has-text-black">Categories:</h2>
+              <h2 class="subtitle has-text-weight-bold has-text-black">Types:</h2>
               <div class="field" v-for="type in types" :key="type">
                 <b-checkbox v-model="selectedTypes"
                   :native-value="type" class="is-warning"> {{ type }}</b-checkbox>
               </div>
             </div>
           </div>
-          <div class="column">
-            <div class="columns is-multiline is-variable is-2">
-              <div class="column is-one-third" v-for="product in products" :key="product._id">
+          <div class="container">
+       
+              <div  v-for="product in products" :key="product._id">
                 <product-item :product="product"></product-item>
               </div>
-            </div>
+        
           </div>
         </div>
       </div>
+
+      
     </section>
   </main>
 </template>
@@ -74,5 +76,6 @@ export default {
 .box {
   background: #f4f2f3;
   box-shadow: none;
+  
 }
 </style>

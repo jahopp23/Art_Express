@@ -1,42 +1,77 @@
 <template>
   <div>
-    <div class="box product-box">
-      <p class="subtitle has-text-centered has-text-black has-text-weight-light product-title" @click="modalActive = true">
-        {{ product.title }}
-      </p>
-      <figure class="image product-image" @click="modalActive = true">
-        <img :src="product.metadata.image.imgix_url" alt="">
-      </figure><br>
-      <button class="button is-link is-outlined is-rounded is-block" @click="addToCart(product)">
-        ${{product.metadata.price}} - Add to Cart
-      </button>
+
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by6" @click="isCardModalActive = true">
+      <img :src="product.metadata.image.imgix_url" alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+       
+      </div>
+      <div class="media-content">
+        <p class="title is-5"><a class="title-link" @click="isCardModalActive = true"> {{ product.title }}</a></p>
+        <p class="subtitle is-6">{{product.metadata.artist }}</p>
+         <button class="button is-link is-outlined is-rounded is-block" @click="addToCart(product)">
+         Buy Print ${{product.metadata.price}} 
+       </button>
+      </div>
     </div>
 
-    <b-modal :active.sync="modalActive">
-        <div class="box modal-box">
-          <a class="close-button" @click.prevent="modalActive = false">X</a>
-          <div class="columns">
-            <div class="column is-hidden-mobile">
-              <figure class="image modal-image">
-                <img :src="product.metadata.image.imgix_url" alt="">
-              </figure>
+    <div class="content">
+ 
+       
+  
+      <br>
+      <time> </time>
+    </div>
+  </div>
+</div>
+
+ <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img :src="product.metadata.image.imgix_url" alt="Image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="static/img/placeholder-1280x960.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                        <a>#css</a> <a>#responsive</a>
+                        <br>
+                        <small>11:09 PM - 1 Jan 2016</small>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-              <div class="box is-bordered">
-                <p class="is-size-4 has-text-weight-bold is-black">
-                  {{ product.title }}
-                </p>
-                <p class="description" v-html="product.content"></p>
-                <button class="button is-link is-outlined is-rounded is-block " @click="addToCart(product)">
-                  ${{product.metadata.price}} - Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-    </b-modal>
+        </b-modal>
+   
+
+
+
+
+
   </div>
 </template>
+
+
+
 
 <script>
 
@@ -44,7 +79,7 @@ export default {
   props: ['product'],
   data() {
     return {
-      modalActive: false
+      isCardModalActive: false
     }
   },
   methods: {
@@ -61,16 +96,13 @@ export default {
 
 <style scoped>
 .product-image img{
-  height: 200px;
-  width: auto;
+ height: 200px;
+  
+  width: 90%;
   margin: 0 auto;
   cursor: pointer;
 }
-.modal-image img{
-  height: 300px;
-  width: auto;
-  margin: 0 auto;
-}
+
 .product-box {
   height: 100%;
 }
@@ -91,16 +123,14 @@ export default {
 .box:not(:last-child) {
     margin-bottom: auto;
 }
-.modal-box {
+.box .modal-box {
   background: #eee;
+  
+ 
+  
 }
-.modal-box .column {
-  padding: 1.5rem;
-}
-p.description {
-  margin: 10px 0 30px;
-  line-height: 1.25;
-}
+
+
 .box.is-bordered {
   border: 1px solid rgba(50, 115, 220, 0.2);
 }
@@ -114,4 +144,22 @@ p.description {
 .close-button:hover {
   color: #ff3860;
 }
+
+
+
+.card{
+  width: 100%;
+  margin-top: 3.00em;
+
+}
+
+.modal-card-title{
+  background-color: white;
+}
+
+
+
+
+
+
 </style>

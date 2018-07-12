@@ -11,6 +11,7 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <nuxt-link :to="{name: 'cart'}"> Cart ({{ cartTotal }})</nuxt-link>
+              <nuxt-link :to ="{name: 'product-item-2'}"> Product</nuxt-link>
             </div>
           </div>
         </div>
