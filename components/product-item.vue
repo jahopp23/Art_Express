@@ -1,6 +1,6 @@
 <template>
   <div>
-
+<section class="product-display">
 <div class="card">
   <div class="card-image">
     <figure class="image is-4by6" @click="isCardModalActive = true">
@@ -30,31 +30,33 @@
     </div>
   </div>
 </div>
-
+</section>
  <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
             <div class="card">
                 <div class="card-image">
-                    <figure class="image is-4by3">
+                    <figure class="image is-4by4">
                         <img :src="product.metadata.image.imgix_url" alt="Image">
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="media">
                         <div class="media-left">
-                            <figure class="image is-48x48">
-                                <img src="static/img/placeholder-1280x960.png" alt="Image">
-                            </figure>
+                            
                         </div>
                         <div class="media-content">
-                            <p class="title is-4">John Smith</p>
-                            <p class="subtitle is-6">@johnsmith</p>
+                            <p class="title is-4">{{ product.title }}</p>
+                            <p class="subtitle is-6">Artist: {{ product.metadata.artist }} </p>
+                                                        <p class="subtitle is-6">Type: {{ product.metadata.type }} </p>
+                                                         <p class="subtitle is-6" v-html="product.content"></p>
+                                                          <button class="button is-link is-outlined is-rounded is-block" @click="addToCart(product)">
+         Buy Print ${{product.metadata.price}} 
+       </button>
                         </div>
                     </div>
 
                     <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                        <a>#css</a> <a>#responsive</a>
+                        
+                        <p class="hashtags">{{ product.metadata.hashtags }}</p>
                         <br>
                         <small>11:09 PM - 1 Jan 2016</small>
                     </div>
@@ -149,7 +151,7 @@ export default {
 
 .card{
   width: 100%;
-  margin-top: 3.00em;
+ 
 
 }
 
@@ -157,9 +159,13 @@ export default {
   background-color: white;
 }
 
+b-modal .card{
+  width: 100%;
+}
 
-
-
+.product-display .card{
+  margin-top: 3.00em;
+}
 
 
 </style>
