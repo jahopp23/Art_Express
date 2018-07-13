@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar is-light">
+    <nav class="navbar is-dark">
       <div class="container">
         <div class="navbar-brand">
           <router-link to="/" class="navbar-item is-size-3 logo has-text-dark">

@@ -5,39 +5,13 @@
         <div class="container">
           <h1 class="title"></h1>
           <p class= "subtitle has-text-weight-light">
-            Photography | Painting | Graphic Design 
-          </p>
+           </p>
         </div>
       </div>
     </section>
-    <section class="section category-list">
-      <div class="container">
-        
-        <div class="columns">
-          <div class="column is-one-fifth">
-            <div class="box">
-              <h2 class="subtitle has-text-weight-bold has-text-black">Categories:</h2>
-              <div class="field" v-for="type in types" :key="type">
-                <b-checkbox v-model="selectedTypes"
-                  :native-value="type" class="is-warning"> {{ type }}</b-checkbox>
-              </div>
-            </div>
-          </div>
-         
-         
-
-
-  
-            
-              
-                <product-item :product="product"></product-item>
-               
-            
-           
-        
-        </div>
-      </div>
-    </section>
+    <div  v-for="product in products" :key="product._id">
+    {{ product._id.title }}
+</div>
   </main>
 </template>
 
@@ -75,10 +49,109 @@ export default {
 .hero {
   background-position: center center;
   background-size: cover;
+
 }
-.box {
-  background: #f4f2f3;
-  box-shadow: none;
+
+
+.field{
+  display:inline-block;
+  margin: 1.00em;
+  text-align: center;
+}
+
+ .category-list .type .card {
+   
+}
+
+.panel-block{
+  background-color:white;
+  border-color: white;
+ 
+}
+
+.panel-heading{
+  background-color: black;
+  color: white;
+}
+
+
+
+.type-card .card-content{
+
+}
+
+
+
+section h2{
+   padding-left: 1.00rem;
+   padding-top: 1.00rem;
+   padding-bottom: 1.00rem;
+   font-size: 1.25rem;
+   font-family: 'Arial';
   
 }
+
+.section .card-content{
+
+    display: inline;
+    padding-bottom: 3.00rem;
+ 
+  
+}
+
+.section{
+  padding: 0;
+}
+
+.section .card-content p {
+  color: black;
+}
+
+.section .card-content span{
+  color: black;
+}
+
+.section .card{
+  width: 100%;
+  text-align: center;
+  position: relative;
+ 
+  background-color:transparent;
+  color: black;
+}
+
+.column{
+  background-color: #eee;
+}
+
+.category-list .product-item{
+  display: inline-block;
+  padding-bottom: 2.00em;
+}
+
+
+.hero-body .title{
+  
+ color: #eee;
+
+ font-family: 'Raleway Dots';
+ font-size: 3.00rem;
+
+
+
+ 
+
+
+}
+
+.hero-body{
+  text-align: center;
+
+}
+
+.section .card{
+  
+}
+
+
 </style>
