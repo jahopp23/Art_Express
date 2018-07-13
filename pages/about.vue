@@ -3,7 +3,7 @@
     <section class="hero is-medium" :style="{ backgroundImage: `url(${hero})` }">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title"></h1>
+          <h1 class="title">About Us</h1>
           <p class= "subtitle has-text-weight-light">
            </p>
         </div>
@@ -11,37 +11,17 @@
     </section>
 
     
-    <section class="section category-list">
+    <section class="section about-us">
       
-        <div class="navbar is-light">
-       <h2>
-       Browse Art by Type:
-       </h2>
-
+        <div class="card">
+         <div class="card-content">
+             <p class="lead">Welcome aboard! ArtParty is a new virtual gallery space where artists of all kinds are represented (i.e. photographers, painters, graphic designers, etc.) We sell high-quality fine art and deliver internationally. Our mission is to promote the work created by hard-working creatives from all walks of life. For artists, we make life simpler by promoting their work and handling shipping. For buyers, we are a dedicated haven for emerging international art and provide museum-quality prints in large formats. You can expect to see some amazing new artwork as ArtParty sails into production!  </p>
+             </div>
+         </div>
     
-    <div class="type-card card-content" v-for="type in types" :key="type">
-    <b-checkbox v-model="selectedTypes"
-:native-value="type" class="is-warning"><p class="title is-7">{{ type }}</p></b-checkbox>
-  </div>
-</div>
+   
+   
 
-      
-         
-    
-          
-      
-
-      
-       
-            
-              <div class="column">
-                <div class="columns is-multiline is-variable is-1">
-                <div class="column is-half" v-for="product in products" :key="product._id">
-                <product-item :product="product"></product-item>
-                </div>
-                </div>
-              </div>
-        
        
      
       
@@ -83,7 +63,7 @@ export default {
 .hero {
   background-position: center center;
   background-size: cover;
-
+  
 }
 
 
@@ -108,7 +88,9 @@ export default {
   color: white;
 }
 
-
+.card{
+ 
+}
 
 .type-card .card-content{
 
@@ -154,8 +136,8 @@ section h2{
   color: black;
 }
 
-.column{
-  background-color: #eee;
+.columns{
+  
 }
 
 .category-list .product-item{
@@ -170,8 +152,7 @@ section h2{
 
  font-family: 'Raleway Dots';
  font-size: 3.00rem;
-
-
+ display: block;
 
  
 
@@ -180,11 +161,18 @@ section h2{
 
 .hero-body{
   text-align: center;
+  height: 300px;
 
 }
 
-.section .card{
-  
+.lead{
+    width: 800px;
+    margin: 0 auto;
+   
+}
+
+.section .about-us .card-content{
+    text-align: center;
 }
 
 

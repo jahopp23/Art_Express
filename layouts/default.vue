@@ -7,10 +7,14 @@
             <p class="art">ART</p><p class="party">PARTY</p>
           </router-link>
         </div>
-        <div class="navbar-menu is-active">
+        <div class="navbar-menu is-active"> 
           <div class="navbar-end">
             <div class="navbar-item">
+                 <nuxt-link :to="{name: 'index'}"> Home </nuxt-link>
+               <nuxt-link :to="{name: 'about'}"> About </nuxt-link>
+                <nuxt-link :to="{name: 'contact'}"> Contact</nuxt-link>
               <nuxt-link :to="{name: 'cart'}"> Cart ({{ cartTotal }})</nuxt-link>
+             
          
             </div>
           </div>
@@ -41,4 +45,6 @@
 body {
   background: #eee;
 }
+
+
 </style>

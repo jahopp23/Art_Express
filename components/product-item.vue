@@ -151,7 +151,9 @@ section .product-display{
 }
 
 
-
+.media-content .title{
+  font-family: 'Raleway Dots';
+}
 .card{
   
  
