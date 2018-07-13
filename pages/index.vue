@@ -3,10 +3,9 @@
     <section class="hero is-medium" :style="{ backgroundImage: `url(${hero})` }">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title"> Delivering Art <em>Worldwide</em>.</h1>
+          <h1 class="title">Delivering Art Worldwide</h1>
           <p class= "subtitle has-text-weight-light">
-            Photography | Painting | Graphic Design 
-          </p>
+           </p>
         </div>
       </div>
     </section>
@@ -16,13 +15,13 @@
       
         <div class="card">
        <h2>
-       Types:
+       Browse Art by Type:
        </h2>
 
     
     <div class="type-card card-content" v-for="type in types" :key="type">
     <b-checkbox v-model="selectedTypes"
-:native-value="type" class="is-warning"><p class="title is-5">{{ type }}</p></b-checkbox>
+:native-value="type" class="is-warning"><p class="title is-7">{{ type }}</p></b-checkbox>
   </div>
 </div>
 
@@ -33,13 +32,17 @@
       
 
       
-          <div class="container">
        
-              <div  v-for="product in products" :key="product._id">
+            
+              <div class="column">
+                <div class="columns is-multiline is-variable is-1">
+                <div class="column is-half" v-for="product in products" :key="product._id">
                 <product-item :product="product"></product-item>
+                </div>
+                </div>
               </div>
         
-          </div>
+       
      
       
     </section>
@@ -81,11 +84,7 @@ export default {
   background-position: center center;
   background-size: cover;
 }
-.box {
-  background: #f4f2f3;
-  box-shadow: none;
-  
-}
+
 
 .field{
   display:inline-block;
@@ -109,7 +108,7 @@ export default {
 }
 
 .card{
-  
+ 
 }
 
 .type-card .card-content{
@@ -121,6 +120,7 @@ export default {
 section h2{
    padding-left: 1.00rem;
    padding-top: 1.00rem;
+   padding-bottom: 1.00rem;
    font-size: 1.25rem;
    font-family: 'Arial';
   
@@ -128,7 +128,7 @@ section h2{
 
 .section .card-content{
 
-    display: inline-block;
+    display: inline;
     padding-bottom: 3.00rem;
  
   
@@ -139,18 +139,49 @@ section h2{
 }
 
 .section .card-content p {
-  color: white;
+  color: black;
+}
+
+.section .card-content span{
+  color: black;
 }
 
 .section .card{
   width: 100%;
   text-align: center;
   position: relative;
-  top: -3.00rem;
-  background-color: black;
-  color: white;
+ 
+  background-color:transparent;
+  color: black;
 }
 
+.columns{
+  
+}
+
+.category-list .product-item{
+  display: inline-block;
+  padding-bottom: 2.00em;
+}
+
+
+.hero-body .title{
+  
+ color: #eee;
+
+ font-family: 'Raleway Dots';
+ font-size: 3.00rem;
+ display: block;
+ display: none;
+ 
+
+
+}
+
+.hero-body{
+  text-align: center;
+
+}
 
 
 </style>

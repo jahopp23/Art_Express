@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nav class="navbar is-black">
+    <nav class="navbar is-light">
       <div class="container">
         <div class="navbar-brand">
           <router-link to="/" class="navbar-item is-size-3 logo has-text-dark">
-            <p>Art Express</p>
+            <p class="art">ART</p><p class="party">PARTY</p>
           </router-link>
         </div>
         <div class="navbar-menu is-active">
@@ -39,6 +39,6 @@
 
 <style>
 body {
-  background: #b4b4b4;
+  background: #eee;
 }
 </style>

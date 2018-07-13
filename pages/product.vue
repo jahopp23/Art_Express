@@ -3,7 +3,7 @@
     <section class="hero is-medium" :style="{ backgroundImage: `url(${hero})` }">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title"> Delivering Fine Art Worldwide.</h1>
+          <h1 class="title"></h1>
           <p class= "subtitle has-text-weight-light">
             Photography | Painting | Graphic Design 
           </p>
@@ -29,9 +29,10 @@
 
   
             
-         
+              
                 <product-item :product="product"></product-item>
-           
+               
+            
            
         
         </div>

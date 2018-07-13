@@ -1,9 +1,10 @@
 <template>
   <div>
 <section class="product-display">
+
 <div class="card">
   <div class="card-image">
-    <figure class="image is-4by6" @click="isCardModalActive = true">
+    <figure class="image is-6by6" @click="isCardModalActive = true">
       <img :src="product.metadata.image.imgix_url" alt="Placeholder image">
     </figure>
   </div>
@@ -14,7 +15,7 @@
       </div>
       <div class="media-content">
         <p class="title is-5"><a class="title-link" @click="isCardModalActive = true"> {{ product.title }}</a></p>
-        <p class="subtitle is-6">{{product.metadata.artist }}</p>
+        <p class="subtitle is-6">by {{product.metadata.artist }}</p>
          <button class="button is-link is-outlined is-rounded is-block" @click="addToCart(product)">
          Buy Print ${{product.metadata.price}} 
        </button>
@@ -30,8 +31,11 @@
     </div>
   </div>
 </div>
+
+
 </section>
  <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
+      
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-4by4">
@@ -62,6 +66,7 @@
                     </div>
                 </div>
             </div>
+          
         </b-modal>
    
 
@@ -97,13 +102,11 @@ export default {
 </script>
 
 <style scoped>
-.product-image img{
- height: 200px;
-  
-  width: 90%;
-  margin: 0 auto;
-  cursor: pointer;
+
+section .product-display{
+
 }
+
 
 .product-box {
   height: 100%;
@@ -150,21 +153,26 @@ export default {
 
 
 .card{
-  width: 100%;
+  
  
 
+}
+
+.product-display .card-image img{
+   max-height: 500px;
+ 
 }
 
 .modal-card-title{
   background-color: white;
 }
 
-b-modal .card{
-  width: 100%;
-}
 
-.product-display .card{
-  margin-top: 3.00em;
+
+
+
+.columns{
+  
 }
 
 

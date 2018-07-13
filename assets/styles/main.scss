@@ -9,21 +9,36 @@ button.modal-close {
 }
 
 .navbar .navbar-brand p{
-  font-family: Faster One;
-  color: #eee;
+ 
+  color: black;
+  font-family: 'Monoton';
+
+  
   
 }
 
-.navbar-end .navbar-item a{
-  color: #eee;
+.navbar .navbar-brand .party{
+  color: red;
+ 
+  font-family: 'Monoton';
 }
 
-.hero-body .title {
-  color: #eee;
+.navbar-end .navbar-item a{
+  color: black;
+  
 }
+
+
 
 .hero-body .subtitle{
   color: #eee;
+  width: 400px;
+  margin: 0 5px;
+  font-size: 1.50rem;
+  position: relative;
+  top: 2.00rem;
+
+  
 }
 
 .hero-body{
@@ -36,6 +51,9 @@ button.modal-close {
 
 }
 
+.footer{
+  background-color: black;
+}
 
 
 
